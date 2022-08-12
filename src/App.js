@@ -1,24 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import { gql, useQuery } from '@apollo/client';
+import './components/App.css';
+import { createTheme, ThemeProvider } from '@mui/material';
+// components
+import Header from './components/layouts/Header';
+
+
+const theme = createTheme({
+  palette: {
+    primary:{
+      main: '#212121'
+    },
+    secondary: {
+      main: '#1b5e20'
+    }
+  }
+})
+
+
 
 function App() {
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div style={{background: '#e0e0e0', minHeight: '100vh'}}>
+      <ThemeProvider theme={theme}>
+     <Header />
+    </ThemeProvider>
+      </div>
   );
 }
 
