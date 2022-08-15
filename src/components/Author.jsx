@@ -1,7 +1,7 @@
 import React from 'react';
 import { useQuery } from '@apollo/client';
 import { GET_AUTHOR_INF } from '../Graphql/queries';
-import { Avatar, Grid, Paper, Typography } from '@mui/material';
+import { Avatar, Divider, Grid, Paper, Typography } from '@mui/material';
 import { Link } from 'react-router-dom';
 
 
@@ -9,8 +9,8 @@ const Author = () => {
 
     const {loading,data,error} = useQuery(GET_AUTHOR_INF)
 
-    console.log(data)
-    // const {authors} = data;
+
+
 
 
     if(loading) return <h4>loading</h4>
@@ -35,8 +35,10 @@ const Author = () => {
                     <Typography variant="p" color="CaptionText" sx={{marginTop: '10px'}}>
                         {item.name}
                     </Typography>
+
                         </Link>
                     </Grid>
+                        
                 ))
             }
         </Grid>

@@ -1,19 +1,18 @@
 import { Avatar, Card, CardContent, CardHeader, CardMedia, Typography , CardActions, Divider, Button} from '@mui/material';
 import React from 'react';
-import axx from '../components/axx.jpg'
 import {Link} from 'react-router-dom';
-const CardEl = ({coverPhoto, title,name,slug, avatar}) => {
+const CardEl = ({coverPhoto, title,name,slug, avatar,author}) => {
    
 
     return (
         <Card sx={{boxShadow: "rgba(0,0,0,0.1) 0px 4px 12px", borderRadius: 4 }}>
             <CardHeader 
-            avatar={<Avatar src={axx}/>}
+            avatar={<Avatar src={author.avatar.url}/>}
             title={<Typography 
             variant="p" 
             color="GrayText" 
             component="p">
-            Mohamad
+            {author.name}
             </Typography>}
             />
             <CardMedia 

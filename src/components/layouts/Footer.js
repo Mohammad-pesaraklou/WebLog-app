@@ -3,7 +3,9 @@ import React from 'react';
 
 function Footer() {
     return (
-        <footer style={{textAlign: 'center',padding: '60px 0'}}>
+        <footer style={{textAlign: 'center',padding: '20px 0',background: 'rgb(193, 198, 202)',marginTop: '50px',
+        boxShadow: "0px -11px 33px 0px rgba(184,170,170,0.75)"
+        }}>
             <Typography
             variant='p'
             color="textSecondary"
