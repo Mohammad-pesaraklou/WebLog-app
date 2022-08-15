@@ -1,8 +1,8 @@
-import { gql, useQuery } from '@apollo/client';
 import './components/App.css';
 import { createTheme, ThemeProvider } from '@mui/material';
 // components
-import Header from './components/layouts/Header';
+import HomePage from './components/HomePage';
+import Layout from './components/layouts/Layout';
 
 
 const theme = createTheme({
@@ -13,6 +13,9 @@ const theme = createTheme({
     secondary: {
       main: '#1b5e20'
     }
+  },
+  typography:{
+    fontFamily: "Montserrat"
   }
 })
 
@@ -24,7 +27,9 @@ function App() {
   return (
     <div style={{background: '#e0e0e0', minHeight: '100vh'}}>
       <ThemeProvider theme={theme}>
-     <Header />
+     <Layout>
+      <HomePage />
+     </Layout>
     </ThemeProvider>
       </div>
   );
