@@ -1,0 +1,49 @@
+/* url('../assets/banner21.jpg') */
+.banner {
+ background: url('../assets/Blog.svg');
+background-position: center;
+background-repeat: no-repeat;
+background-size: contain;
+width: 100%;
+min-height: 600px;
+}
+.list-item{
+ margin: 20px;
+ cursor: pointer;
+}
+.list-item:hover{
+    color: #eabc18;
+    transition: all 0.1s ease-in;
+}
+.bannerContainer{
+height: 200px;
+display: flex;
+flex-direction: column;
+padding-top: 50px;
+justify-content: space-around;
+text-align: center;
+}
+
+.carouselItem{
+margin-top: 40px;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+text-align: center;
+text-decoration: none;
+color: white;
+text-transform: capitalize;
+}
+.carousel{
+display: flex;
+align-items: center;
+}
+.row{
+ background-color: #16171a;
+ cursor: pointer;
+font-family: 'Montserrat';
+}
+.row:hover{
+    background-color: #131111;
+}

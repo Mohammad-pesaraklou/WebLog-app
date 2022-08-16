@@ -1,11 +1,11 @@
 import './components/App.css';
 import { createTheme, ThemeProvider } from '@mui/material';
 // components
-import HomePage from './components/HomePage';
 import Layout from './components/layouts/Layout';
 import { Route, Routes } from 'react-router-dom';
 import AuthorPage from './components/AuthorPage';
 import BlogPage from './components/BlogPage';
+import MainHome from './components/MainHome';
 
 
 const theme = createTheme({
@@ -28,11 +28,11 @@ function App() {
 
 
   return (
-    <div style={{background: '#e0e0e0', minHeight: '100vh'}}>
+    <div style={{background: '#14161a', minHeight: '100vh'}}>
       <ThemeProvider theme={theme}>
      <Layout>
       <Routes>
-        <Route path='/' element={<HomePage />}/>
+        <Route path='/' element={<MainHome />}/>
         <Route path='/blogs/:slug' element={<BlogPage />}/>
         <Route path='/authors/:slug' element={<AuthorPage />}/>
       </Routes>

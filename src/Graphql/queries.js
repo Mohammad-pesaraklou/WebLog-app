@@ -58,6 +58,32 @@ query getInfo($slug: String!){
 }
 `
 
+const GET_BLOG_DET = gql`
+  query gerBlogDet($slug: String!){ 
+    post(where: {slug: $slug}) {
+      author {
+      ... on Author {
+        name
+        avatar {
+          url
+        }
+        field
+      }
+    }
+    id
+    slug
+    title
+    content {
+      html
+    }
+    coverPhoto {
+      url
+    }
+  }
+
+  }  
+`
 
 
-export { Get_BLOGS_INFO, GET_AUTHOR_INF,GET_AUTHOR_DET }
+
+export { Get_BLOGS_INFO, GET_AUTHOR_INF,GET_AUTHOR_DET,GET_BLOG_DET }
