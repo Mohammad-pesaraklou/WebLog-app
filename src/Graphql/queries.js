@@ -44,7 +44,7 @@ query getInfo($slug: String!){
     field
     name
     description{
-      text
+      html
     }
     posts {
     title
@@ -83,7 +83,15 @@ const GET_BLOG_DET = gql`
 
   }  
 `
+const GET_COMMENTS = gql`
+query{
+  comments{
+    text
+    name
+    id
+  }
+}
+`
 
 
-
-export { Get_BLOGS_INFO, GET_AUTHOR_INF,GET_AUTHOR_DET,GET_BLOG_DET }
+export { Get_BLOGS_INFO, GET_AUTHOR_INF,GET_AUTHOR_DET,GET_BLOG_DET,GET_COMMENTS }

@@ -2,8 +2,9 @@ import React, { useState,useEffect } from 'react';
 import { useQuery } from '@apollo/client';
 import { Get_BLOGS_INFO } from '../Graphql/queries';
 import { Grid } from '@mui/material';
-import CardEl from './CardEl';
-import Loader from './Loader';
+import { motion } from "framer-motion"
+import CardEl from '../shared/CardEl';
+import Loader from '../shared/Loader';
 
 function Blogs() {
 
@@ -14,7 +15,7 @@ function Blogs() {
 
 
     return (
-        <Grid container spacing={2}>
+        <Grid container spacing={2}    >
            {
             data.posts.map(post => (
                 <Grid item xs={12} sm={6} md={4} key={post.id}>

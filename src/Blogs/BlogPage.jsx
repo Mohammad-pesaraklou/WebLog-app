@@ -3,8 +3,10 @@ import { Avatar, Container, Grid, Typography } from '@mui/material';
 import React from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { GET_BLOG_DET } from '../Graphql/queries';
-import Loader from './Loader';
+import Loader from '../shared/Loader';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import CommentForm from '../comments/CommentForm';
+import Comments from '../comments/Comments';
 
 const BlogPage = () => {
 
@@ -48,10 +50,16 @@ const BlogPage = () => {
                 </Grid>
                 <Grid item xs={12} mt={6}>
                     <Typography variant='p' color="white" fontSize={20}>
-                        <div dangerouslySetInnerHTML={{__html: data.post.content.html}}>
+                        <div dangerouslySetInnerHTML={{__html: data.post.content.html}} style={{lineHeight: '40px'}}>
 
                         </div>
                     </Typography>
+                </Grid>
+                <Grid item xs={12}>
+                    <CommentForm slug={slug}/>
+                </Grid>
+                <Grid item xs={12}>
+                    <Comments slug={slug}/>
                 </Grid>
             </Grid>
         </Container>

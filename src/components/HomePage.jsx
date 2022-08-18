@@ -1,9 +1,9 @@
 import { Grid, Typography ,Box} from '@mui/material';
 import { Container } from '@mui/system';
 import React from 'react';
-import Author from './Author';
+import Author from '../Authors/Author';
 //components
-import Blogs from './Blogs';
+import Blogs from '../Blogs/Blogs';
 
 function HomePage() {
     return (

@@ -9,7 +9,7 @@ import '../Banner.css';
 
 const Header = () => {
     return ( 
-        <AppBar position='sticky' color='transparent'  >
+        <AppBar position='sticky' x={{color: "#14161a"}}>
             <Container>              
             <Toolbar >
 
@@ -28,7 +28,7 @@ const Header = () => {
             <Typography variant='h5'  sx={{fontFamily: 'Montserrat',color: "#EEBC1D"}}>
                 Web Land
             </Typography>
-            <nav >
+            <nav>
                 <ul>
                     <Typography sx={{display: 'flex',padding: '0px 40px',margin: "20px",listStyle: 'none',color: '#fefefe'}} variant="p">
                     <li className='list-item'>Blog</li>

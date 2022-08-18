@@ -3,9 +3,10 @@ import { createTheme, ThemeProvider } from '@mui/material';
 // components
 import Layout from './components/layouts/Layout';
 import { Route, Routes } from 'react-router-dom';
-import AuthorPage from './components/AuthorPage';
-import BlogPage from './components/BlogPage';
+import AuthorPage from './Authors/AuthorPage';
+import BlogPage from './Blogs/BlogPage';
 import MainHome from './components/MainHome';
+import ScrollToTop from './shared/ScrollToTop';
 
 
 const theme = createTheme({
@@ -20,6 +21,7 @@ const theme = createTheme({
   typography:{
     fontFamily: "Montserrat"
   }
+
 })
 
 
@@ -31,6 +33,7 @@ function App() {
     <div style={{background: '#14161a', minHeight: '100vh'}}>
       <ThemeProvider theme={theme}>
      <Layout>
+      <ScrollToTop />
       <Routes>
         <Route path='/' element={<MainHome />}/>
         <Route path='/blogs/:slug' element={<BlogPage />}/>

@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
+import "react-alice-carousel/lib/alice-carousel.css";
 import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client'
 import { BrowserRouter } from 'react-router-dom';
 const client = new ApolloClient({

@@ -3,7 +3,7 @@ import { useQuery } from '@apollo/client';
 import { GET_AUTHOR_DET } from '../Graphql/queries';
 import { Link, useParams } from 'react-router-dom';
 import { Avatar, Button, Card, CardContent, CardHeader, CardMedia, Container,Divider,Grid, Typography } from '@mui/material';
-import Loader from './Loader';
+import Loader from '../shared/Loader';
 
 
 
@@ -43,7 +43,9 @@ const AuthorPage = () => {
                     </Typography>
                     <Grid item xs={12} mt={6}>
                     <Typography variant="p" sx={{fontSize: '18px',color: "#d9d6ce"}}>
-                        {author.description.text}
+                        <div dangerouslySetInnerHTML={{__html: author.description.html}} style={{lineHeight: '40px'}}>
+
+                        </div>
                     </Typography>
                     </Grid>
                     <Grid item mt={10}>

@@ -2,7 +2,7 @@ import { Avatar, Card, CardContent, CardHeader, CardMedia, Typography , CardActi
 import React from 'react';
 import {Link} from 'react-router-dom';
 const CardEl = ({coverPhoto, title,name,slug, avatar,author}) => {
-   
+    
 
     return (
         <Card sx={{boxShadow: "rgba(0,0,0,0.1) 0px 4px 12px", borderRadius: 4 }}>
