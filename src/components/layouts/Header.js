@@ -28,7 +28,7 @@ const Header = () => {
             <Typography variant='h5'  sx={{fontFamily: 'Montserrat',color: "#EEBC1D"}}>
                 Web Land
             </Typography>
-            <nav>
+            {/* <nav>
                 <ul>
                     <Typography sx={{display: 'flex',padding: '0px 40px',margin: "20px",listStyle: 'none',color: '#fefefe'}} variant="p">
                     <li className='list-item'>Blog</li>
@@ -36,7 +36,7 @@ const Header = () => {
                     <li className='list-item'>Contact Us</li>
                     </Typography>
                 </ul>
-            </nav>
+            </nav> */}
             </Toolbar>    
         </Container>
         </AppBar>   
